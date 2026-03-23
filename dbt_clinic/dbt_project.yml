@@ -1,0 +1,15 @@
+name: 'clinic_data_pipeline'
+version: '1.0.0'
+config-version: 2
+
+profile: 'clinic_duckdb'
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  clinic_data_pipeline:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_appointments
+    description: "Bảng dữ liệu đặt lịch đã được làm sạch và loại bỏ trùng lặp."
+    columns:
+      - name: appointment_id
+        description: "Khóa chính của mỗi lượt đặt lịch."
+        tests:
+          - unique
+          - not_null
+      - name: doctor_id
+        description: "Mã bác sĩ phụ trách."
+        tests:
+          - not_null
+
+  - name: stg_doctors
+    description: "Danh mục thông tin bác sĩ đã được chuẩn hóa kiểu dữ liệu."
+    columns:
+      - name: doctor_id
+        description: "Khóa chính định danh bác sĩ."
+        tests:
+          - unique
+          - not_null
+      - name: is_active
+        description: "Trạng thái làm việc của bác sĩ."
+        tests:
+          - not_null

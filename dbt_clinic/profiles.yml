@@ -1,0 +1,7 @@
+clinic_duckdb:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '../data/database/clinic_dwh.duckdb'
+      threads: 4

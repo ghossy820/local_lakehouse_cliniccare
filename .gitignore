@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Data & Database
+data/raw_files/*.json
+data/raw_files/*.csv
+data/database/*.duckdb
+data/database/*.duckdb.wal
+
+# dbt
+dbt_clinic/dbt_packages/
+dbt_clinic/target/
+dbt_clinic/logs/
+
+# Dagster
+.dagster_home/
+storage/
